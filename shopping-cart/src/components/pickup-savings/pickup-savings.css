@@ -1,0 +1,8 @@
+.pickupSavings {
+    text-decoration: underline;
+}
+
+.totalSavings {
+    color: red;
+    font-weight: bold;
+}
