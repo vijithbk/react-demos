@@ -1,0 +1,17 @@
+.item {
+    background-color: #CCC;
+    border-radius: 5px;
+    min-width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.item:last-child {
+    border: 0;
+}
+
+.title {
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.cart-item {
+    background-color: #ffffb3;
+    border-radius: 5px;
+    min-width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cart-item-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
