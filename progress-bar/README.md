@@ -18,3 +18,6 @@ Create a progress bar component. It should follow the guidelines below:
 * Quality of code.
 * Overall user experience and error handling.
 
+
+![progress](https://github.com/user-attachments/assets/db6daa5f-0fc8-4e54-b9f0-1b359eba722d)
+
