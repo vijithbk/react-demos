@@ -1,0 +1,44 @@
+[
+    {
+        "question": "What is the largest planet?",
+        "answerOptions": [
+            {
+                "text": "Saturn",
+                "isCorrect": "false"
+            },
+            {
+                "text": "Mars",
+                "isCorrect": "false"
+            },
+            {
+                "text": "Earth",
+                "isCorrect": "false"
+            },
+            {
+                "text": "Jupiter",
+                "isCorrect": "true"
+            }
+        ]
+    },
+    {
+        "question": "What is the tallest mountain in the world?",
+        "answerOptions": [
+            {
+                "text": "Mount Everest",
+                "isCorrect": "true"
+            },
+            {
+                "text": "K2",
+                "isCorrect": "false"
+            },
+            {
+                "text": "Kangchenjunga",
+                "isCorrect": "false"
+            },
+            {
+                "text": "Lhotse",
+                "isCorrect": "false"
+            }
+        ]
+    }
+]
