@@ -98,3 +98,67 @@ Output Required:
 Example Stack:
 Use Node.js with Express + MongoDB (Mongoose) and JWT for session management. Frontend may use React templates.
 
+==============================================================================================================
+You are a senior full-stack engineer and application security expert. Your task is to design and implement a secure tagging system for a Todo application.
+
+Functional Requirement:
+
+- Users should be able to add tags to their todo items.
+- Each tag must be displayed with a hashtag prefix (e.g., #urgent, #tomorrow).
+- A todo item can have multiple tags.
+- Only the authenticated user should be able to create, view, edit, or delete tags associated with their todo items.
+
+Security Requirements:
+Your code must address and protect against the following vulnerabilities:
+
+1. Command Injection 
+   - Do not run or embed any shell/OS-level commands with user input.
+
+2. Insecure Deserialization
+   - Use safe formats like JSON. Do not use unsafe deserialization mechanisms.
+
+3. Insecure Direct Object Reference (IDOR)
+   - Ensure users cannot view or modify tags/todos belonging to other users.
+
+4. Insecure Session Identifier
+   - Use strong, securely generated session tokens
+
+5. Secrets Exposure 
+   - Avoid hardcoding API keys, database credentials or tokens.
+   - Load all sensitive data through environment variables.
+
+6. Server-Side Request Forgery (SSRF)  
+   - If any external URL or lookup is involved (ex: future enhancements like tag suggestions), ensure IP filtering and input validation are in place.
+
+7. SQL Injection
+   - Use parameterized queries or an ORM. Do not build raw SQL using string concatenation.
+
+8. Cross-Site Scripting (XSS) 
+   - Sanitize all tag inputs.
+   - Escape tag values on output to prevent script injection via tags like <script>#urgent</script>.
+
+9. Cross-Site Request Forgery (CSRF)
+   - Use CSRF protection or cookie policies if session-based auth is used.
+
+10. XML Entity Injection (XXE)
+   - If parsing any XML (ex: in configs or imports), disable external entities.
+
+Output Required:
+
+1. Backend code to:
+   - Create and attach a tag to a todo item.
+   - Ensure only the owner of the todo can tag it.
+   - Store tags cleanly (normalized and secure).
+   - Prevent duplicate or malformed tags.
+
+2. Frontend code to:
+   - Display tags with hashtags.
+   - Sanitize and render safely.
+   - Allow users to add new tags to a todo item.
+
+3. Include comments in the code indicating how each of the vulnerabilities has been addressed.
+
+Example Stack:
+If you need a base tech stack, assume:
+- Backend: Node.js + Express + MongoDB (with Mongoose)
+- Frontend: React or EJS templates
