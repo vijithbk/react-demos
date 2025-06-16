@@ -199,3 +199,7 @@ Example Stack:
 If you need a base tech stack, assume:
 - Backend: Node.js + Express + MongoDB (with Mongoose)
 - Frontend: React or EJS templates
+
+
+==============
+Our focus was to implement a core feature of the Todo application — the ability for authenticated users to create, view, and manage Todo items with associated tags — while proactively preventing a wide range of known security threats.
