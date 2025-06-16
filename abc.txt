@@ -32,3 +32,69 @@ Output:
 4. Add a brief explanation at the top summarizing how each vulnerability is addressed.
 
 Use Node.js with Express, MongoDB with Mongoose for the data layer, and JWT for session management.
+
+======================================================================================================
+
+You are a senior full-stack engineer and application security specialist. Your task is to implement secure backend and frontend code for a Todo application with two features: a Dashboard Page and an Update Page.
+
+Functional Requirements:
+
+1. Dashboard Page:
+   - Display all todo items created by the currently logged-in user.
+   - For each todo item, display:
+     - title
+     - description
+     - completed status (checkbox)
+     - tags (prefixed by `#`)
+   - Provide buttons to update and delete each item.
+
+2. Update Page:
+   - Allow the user to create a new todo item or update an existing one.
+   - Fields: title, description, completed and tags.
+
+Security Requirements:
+Ensure that your implementation protects against the following vulnerabilities:
+1. Command Injection 
+   - Do not use or expose shell/OS command execution in any form.
+
+2. Insecure Deserialization
+   - Use only safe formats like JSON. Do not use `eval` etc.
+
+3. Insecure Direct Object Reference (IDOR) 
+   - Ensure only the authenticated user can access, update, or delete their own todo items.
+   - Enforce object ownership checks on all actions.
+
+4. Insecure Session Identifier
+   - Use secure, cryptographically generated tokens
+   - Ensure tokens are properly signed, stored securely (e.g., HttpOnly, Secure cookies).
+
+5. Secrets Exposure 
+   - Do not hardcode secrets. Load them from environment variables or secure vaults.
+   - Mask secrets in logs and error messages.
+
+6. Server-Side Request Forgery (SSRF) 
+   - If there is any user-supplied URL (for example, in future tag features), validate inputs.
+
+7. SQL Injection
+   - Use parameterized queries or ORM with input sanitization. Do not construct raw queries using user input.
+
+8. Cross-Site Scripting (XSS)
+   - Sanitize user inputs before rendering.
+   - Use escaping libraries or frontend frameworks that prevent raw HTML injection.
+
+9. Cross-Site Request Forgery (CSRF) 
+   - If cookie-based sessions are used, implement CSRF tokens or SameSite cookie policies.
+
+10. XML Entity Injection (XXE)
+   - If parsing XML (even via config or third-party modules), disable external entity resolution.
+
+Output Required:
+1. A secure backend implementation (assume Node.js with Express).
+2. A secure frontend rendering logic for the dashboard and update pages.
+3. Inline comments indicating where and how each of the above vulnerabilities is mitigated.
+4. A 5–10 line summary at the top of the code explaining how your code defends against each vulnerability.
+5. Do not use insecure libraries, and avoid excessive boilerplate—focus on security in code logic.
+
+Example Stack:
+Use Node.js with Express + MongoDB (Mongoose) and JWT for session management. Frontend may use React templates.
+
