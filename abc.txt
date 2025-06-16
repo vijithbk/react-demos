@@ -31,6 +31,19 @@ Output:
 3. Include short inline comments explaining security controls wherever applied.
 4. Add a brief explanation at the top summarizing how each vulnerability is addressed.
 
+Sample Test Cases to Include:
+- Should successfully add a todo item with valid input
+- Should convert hashtags into tag array (example: ["shopping", "urgent"])
+- Should reject input containing script tags or dangerous characters
+- Should deny unauthorized edits or deletions by other users
+- Should not allow SQL injection payloads through input
+- Should reject requests lacking valid CSRF tokens
+- Should generate unpredictable and secure session IDs
+- Should validate environment-based secrets are used and not hardcoded
+- Should block SSRF or command injection attempts via input
+- Should reject insecure XML input if any deserialization or XML parsing is introduced
+- Use Node.js with Express, MongoDB with Mongoose for the data layer, and JWT for session management.
+
 Use Node.js with Express, MongoDB with Mongoose for the data layer, and JWT for session management.
 
 ======================================================================================================
