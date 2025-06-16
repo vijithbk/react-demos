@@ -171,6 +171,30 @@ Output Required:
 
 3. Include comments in the code indicating how each of the vulnerabilities has been addressed.
 
+Test Cases to Include:
+
+Should add valid tags and store them in normalized format.
+
+Should reject tags containing scripts, HTML, or command-like strings.
+
+Should return 403 if user attempts to modify another user’s tags or todo items.
+
+Should enforce CSRF protection for tag-related operations.
+
+Should escape output correctly when displaying tags to avoid XSS.
+
+Should reject SQL injection patterns in tags.
+
+Should reject deserialization of unexpected objects (if applicable).
+
+Should not execute any command-like patterns submitted through tag input.
+
+Should verify that all secrets are referenced via environment variables and not hardcoded.
+
+Should reject tag requests using disallowed internal URLs if SSRF applies.
+
+Now, implement this feature securely with all the above considerations.
+
 Example Stack:
 If you need a base tech stack, assume:
 - Backend: Node.js + Express + MongoDB (with Mongoose)
